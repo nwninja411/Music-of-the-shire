@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DJ DEMO</title>
+        <style>
+            body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                background-color:  rgb(5, 37, 5);;
+                font-family: 'RingBearer' , serif;
+                color: rgb(105, 75, 55);
+            }
+            h1 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            audio {
+                margin-bottom: 10px;
+            }
+            audio:hover{
+                transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+        @font-face {
+        /*Here I am naming my font so that I can refernce it*/
+        font-family: 'RingBearer';
+        /*Here I am linking my font file so that when I refernce it it knows what the font looks like*/
+        src: url('RingbearerMedium-51mgZ.ttf') format('truetype');
+        /*these tags let the code know that the style and weight should be normal rather than bold or italic*/
+        font-weight: normal; 
+        font-style: normal; 
+        }
+        </style>
+    </head>
+    <body>
+        <div class="player-container"></div>
+        <h1>Melodies of the Shire</h1>
+
+        <audio controls preload="auto">
+            <source src="Whispers of the Shire ext v1.2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls preload="auto">
+            <source src="Whispers of the Shire ext v1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        </div>
+    </body>
+    
+</html>
