@@ -1,33 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--Here I am making it so the webpage displays correctly on any size screen-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DJ DEMO</title>
-        <style>
-            body{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-                margin: 0;
-                background-color:  rgb(5, 37, 5);;
-                font-family: 'RingBearer' , serif;
-                color: rgb(105, 75, 55);
-            }
-            h1 {
-                margin-bottom: 20px;
-                text-align: center;
-            }
-            audio {
-                margin-bottom: 10px;
-            }
-            audio:hover{
-                transform: scale(1.1);
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-        @font-face {
+        <!--Name the tab of the webpage-->
+        <title>All Together Now</title>
+    </head>
+    <style>
+         @font-face {
         /*Here I am naming my font so that I can refernce it*/
         font-family: 'RingBearer';
         /*Here I am linking my font file so that when I refernce it it knows what the font looks like*/
@@ -36,21 +16,66 @@
         font-weight: normal; 
         font-style: normal; 
         }
-        </style>
-    </head>
+        body{
+            font-family: 'RingBearer', serif;
+            background: url('Map-transformed.jpeg');
+            background-size: 120vh;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            margin: 0;
+            height: 100vh;
+            background-color: rgb(120,122,112);
+        }
+        h1{
+            color: rgb(60,35,14);
+        }
+        #game {
+                position: absolute;
+                bottom: 18%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                max-width: 300px;
+                border: 5px solid rgb(96,68,47);
+                background-color: rgba(0, 0, 0, .8);
+                border-radius: 10px;
+                padding: 5px;
+                color: rgb(192,179,161);
+            }
+        #Map{
+            position: relative;
+            width: 100%;
+            max-width: 1200PX;
+            height: 100%;
+            margin: 0 auto;
+        
+        }
+        button{
+            font-family: 'RingBearer', serif;
+            padding: 10px 20px;
+            margin: 3px;
+            background-color: rgb(120,122,112);
+            border: none;
+            color: rgb(223, 207, 186);
+            border-radius: 5px;
+        }
+        button:hover {
+            transform: scale(1.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                background-color: rgb(147, 150, 138);
+            }
+    </style>
     <body>
-        <div class="player-container"></div>
-        <h1>Melodies of the Shire</h1>
-
-        <audio controls preload="auto">
-            <source src="Whispers of the Shire ext v1.2.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="auto">
-            <source src="Whispers of the Shire ext v1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+        <h1>One Journey to Rule Them All</h1>
+    <div id="Map">
+        <div id="Player" style="top: 50%; left: 20%;"></div>
+        <div id="game">
+            <p id="question">Do you wish to leave the shire with Gandalf?</p>
+            <button onClick="chooseAnswer('no')">No</button>
+            <button onClick="chooseAnswer('yes')">Yes</button>
         </div>
+    </div>
     </body>
-    
 </html>
